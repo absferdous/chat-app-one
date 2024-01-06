@@ -7,12 +7,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDHqQyaSBeJEyKvY0LsStiyA52Ob5js7G0",
-  authDomain: "chatappone-2e765.firebaseapp.com",
-  projectId: "chatappone-2e765",
-  storageBucket: "chatappone-2e765.appspot.com",
-  messagingSenderId: "254725038123",
-  appId: "1:254725038123:web:f0c4fe21a44c778d8d4a6e",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
 // Initialize Firebase
