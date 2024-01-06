@@ -24,7 +24,7 @@ const SetRoom = ({ setroom }) => {
           onClick={() => setroom(roomInputRef.current.value)}
           className='   min-h-9 mt-12 rounded-3xl hover:bg-white hover:text-black px-16 border-2 border-black bg-neutral-800 text-white'
         >
-          <p className=''>makeRoom</p>
+          makeRoom
         </button>
       </div>
     </div>
