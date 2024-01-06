@@ -12,6 +12,7 @@ import {
   where,
 } from "firebase/firestore";
 import { auth, db } from "../firebase-config";
+import Message from "./Message";
 
 const Chat = ({ room }) => {
   const [newMessage, setnewMessage] = useState("");
@@ -48,29 +49,18 @@ const Chat = ({ room }) => {
   };
   return (
     <div>
-      {messages.map(message => (
-        <div key={message.id} className=' mb-8 '>
-          <p className='flex-col flex max-sm:justify-around justify-center items-baseline'>
-            <span className=' font-serif font-medium mt-1'>{message.user}</span>
-
-            <span className=' border-y-2 border-zinc-400 bg-neutral-100 m-3 px-8 rounded-3xl py-3 font-semibold shadow-2xl'>
-              {message.text}
-            </span>
-          </p>
-        </div>
-      ))}
-
+      <Message messages={messages} />
       <form onSubmit={handlesubmit}>
-        <div className=' bg-neutral-100 px-4 mt-3 mb-3  flex justify-between  items-center sticky bottom-0 w-full '>
+        <div className='  px-4 mt-3 mb-3  flex justify-start  items-center fixed bottom-0 w-full '>
           <input
             placeholder='type your message here..............'
-            className=' bg-neutral-20 px-3 py-1 mx-3 mt-5  rounded w-full border-2 border-black text-white'
+            className='  px-3 py-1 mx-3 mt-5  rounded w-full border-2 border-cornflower-200 '
             value={newMessage}
             type='text'
             onChange={e => setnewMessage(e.target.value)}
           />
           <button
-            className='  rounded-lg hover:bg-white hover:text-black px-3 py-2 mt-4 border-2 border-black bg-neutral-800 text-white'
+            className='  rounded-lg hover:bg-cornflower-400  bg-cornflower-700 hover:text-black px-3 py-2 mt-4 border-2  border-cornflower-200  text-white'
             type='submit'
           >
             <HiChevronDoubleRight />

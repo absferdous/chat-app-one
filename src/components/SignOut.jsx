@@ -2,11 +2,12 @@ import React from "react";
 import { HiMiniArrowLeftOnRectangle } from "react-icons/hi2";
 
 import { auth } from "../firebase-config";
+import Buttons from "./Buttons";
 
 const SignOut = ({ signout }) => {
   return (
     <>
-      <div className='rounded-3xl shadow-2xl px-3 mt-1 flex justify-between items-center gap-6 bg-neutral-900 mx-1'>
+      <div className='  border-2  border-cornflower-400  bg-gradient-to-r from-cornflower-500 to-cornflower-900 relative z-10 rounded  px-3 mt-1 flex justify-between items-center gap-6  mx-1'>
         {auth.currentUser && (
           <img
             className=' rounded-full'
@@ -16,15 +17,12 @@ const SignOut = ({ signout }) => {
             alt={auth.currentUser.displayName}
           />
         )}
-        <button
-          className='  mb-3 mt-3 rounded-2xl hover:bg-white hover:text-black px-8 py-2 border-2 border-black bg-neutral-800 text-white'
-          onClick={signout}
-        >
-          <div className='flex items-center gap-2 '>
-            <p className=' text-md'>signout</p>{" "}
-            <HiMiniArrowLeftOnRectangle style={{ width: 23, height: 23 }} />
-          </div>
-        </button>
+
+        <Buttons
+          label={"signout"}
+          onclickfunc={signout}
+          icon={<HiMiniArrowLeftOnRectangle />}
+        />
       </div>
       ;
     </>
