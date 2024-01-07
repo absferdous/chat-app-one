@@ -20,7 +20,6 @@ const Auth = ({ setisAuth }) => {
       <div className='flex justify-center items-center'>
         <h3 className='text-4xl text-center font-extrabold text-cornflower-950'>
           Text <br />
-          {/* <HiMiniChatBubbleOvalLeft /> */}
           <span className='text-white animate-pulse text-8xl'>Me</span>
         </h3>
         <HiMiniChatBubbleOvalLeft />
