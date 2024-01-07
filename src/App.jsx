@@ -37,7 +37,7 @@ function App() {
         </div>
       ) : (
         <div>
-          <SetRoom setroom={setroom} />
+          <SetRoom setroom={setroom} room={room} />
         </div>
       )}
     </>

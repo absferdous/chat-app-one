@@ -4,6 +4,7 @@ import { signInWithPopup } from "firebase/auth";
 import { HiMiniChatBubbleOvalLeft } from "react-icons/hi2";
 import Cookies from "universal-cookie";
 import Buttons from "./Buttons";
+
 const Auth = ({ setisAuth }) => {
   const cookies = new Cookies();
   const signInWithGoogle = async () => {

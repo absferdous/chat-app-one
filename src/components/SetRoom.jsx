@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { HiMiniArrowDown } from "react-icons/hi2";
 import Buttons from "./Buttons";
 
-const SetRoom = ({ setroom }) => {
+const SetRoom = ({ setroom, room }) => {
   const roomInputRef = useRef();
   return (
     <div
@@ -19,13 +19,12 @@ const SetRoom = ({ setroom }) => {
           <br />
         </label>
 
-        {/* <HiMiniArrowDown /> */}
         <input
           ref={roomInputRef}
           className=' border-2  border-corn-700 rounded-2xl px-7 py-4 '
           placeholder=' Enter a room name'
         />
-        {/* onClick={() => setroom(roomInputRef.current.value)} */}
+
         <Buttons
           label={"enter"}
           onclickfunc={() => setroom(roomInputRef.current.value)}
