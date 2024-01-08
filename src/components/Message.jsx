@@ -18,7 +18,7 @@ const Message = ({ messages }) => {
     mx-2  overflow-auto  max-h-screen
      relative
       bottom-16
-       mt-10 py-4 px-2'
+       mt-14 py-4 px-2'
     >
       {messages.map(message => (
         <div
