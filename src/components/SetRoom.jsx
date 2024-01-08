@@ -11,22 +11,25 @@ const SetRoom = ({ setroom, room }) => {
     >
       <div className='flex flex-col justify-center items-center'>
         <label className='  text-3xl font-mono font-extrabold mb-8  text-white z-10'>
-          SET ....
+          SET A
           <span className='  text-8xl'>
             <br />R
             <span className=' text-cornflower-100 animate-pulse'>OO</span>M{" "}
+            <br />
           </span>
+          {/* FOR starting the conversation
           <br />
+          room name should be same for both ends */}
         </label>
 
         <input
           ref={roomInputRef}
           className=' border-2  border-corn-700 rounded-2xl px-7 py-4 '
-          placeholder=' Enter a room name'
+          placeholder=' Ex: room5 '
         />
 
         <Buttons
-          label={"enter"}
+          label={"makeroom"}
           onclickfunc={() => setroom(roomInputRef.current.value)}
         />
       </div>
