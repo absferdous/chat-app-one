@@ -24,7 +24,6 @@ const SignOut = ({ signout }) => {
           icon={<HiMiniArrowLeftOnRectangle />}
         />
       </div>
-      ;
     </>
   );
 };
