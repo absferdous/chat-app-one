@@ -14,8 +14,8 @@ const Message = ({ messages }) => {
 
   return (
     <div
-      className='bg-gradient-to-tr from-cornflower-400 to-cornflower-100 
-    mx-2  overflow-auto min-h-full
+      className=' 
+    mx-2  overflow-auto  max-h-screen
      relative
       bottom-16
        mt-10 py-4 px-2'
@@ -34,7 +34,7 @@ const Message = ({ messages }) => {
             <p
               className={`${
                 auth.currentUser.displayName === message.user
-                  ? "bg-cornflower-300 text-black font-mono font-semibold justify-end px-8 py-3 rounded-ss-3xl shadow-2xl "
+                  ? "bg-cornflower-400 text-black font-mono font-semibold justify-end px-8 py-3 rounded-ss-3xl shadow-2xl "
                   : " bg-cornflower-100 text-black  font-semibold font-mono justify-start border-cornflower-900 shadow-2xl rounded-ss-3xl px-8 py-3"
               }`}
             >
